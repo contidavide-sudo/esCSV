@@ -11,7 +11,7 @@
             List<string> disponibilita = new List<string>();
 
             string[] arrPar;
-            int sommaP = 0;
+            int sommaP = 0, numP=0;
             float media;
 
             using (StreamReader sr = new StreamReader("prodotti_abbigliamento.csv"))
@@ -30,13 +30,14 @@
                     prezzo.Add(arrPar[3]);
 
                     sommaP = sommaP + Convert.ToInt32(arrPar[3]);
+                    numP++;
 
                     disponibilita.Add(arrPar[4]);
 
                 }
             }
 
-
+            media = sommaP / numP;
 
 
         }
